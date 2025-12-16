@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #FFF8F0;
+    font-family: "BlinkMacSystemFont", "Segoe UI", "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+.Header {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #FFF8F0;
+    padding: 10px 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #2C3035;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: teal;
+}
+
+#myimg {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#myimg img {
+    height: 100%;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+#myimg:hover {
+    border-radius: 0;
+    height: 104px;
+    width: 115px;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Nav {
+    display: flex;
+    gap: 20px;
+}
+
+.Nav a {
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+    color: black;
+    font-weight: 500;
+}
+
+.Nav a:hover {
+    color: blue;
+}
+
+.Main {
+    width: 100%;
+}
+
+section {
+    padding: 60px 5%;
+}
+
+#home h2 {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    text-align: justify;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    background: white;
+}
+
+#home h2:hover {
+    transform: translateY(15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: orange;
+    font-size: clamp(1.1rem, 2.8vw, 1.7rem);
+}
+
+.abo, .pro, .sskil, .touch {
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, sans-serif;
+    color: green;
+    margin-top: 75px;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.p1, .p2, .p3 {
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 19px;
+    text-align: justify;
+    color: hsla(297, 92%, 15%, 0.903);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    background: white;
+}
+
+.p1:hover, .p2:hover, .p3:hover {
+    color: black;
+    background: linear-gradient(135deg, #FDF3E7 0%, #F6E7D8 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.pro1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.pr1, .pr2 {
+    width: 100%;
+    max-width: 280px;
+    min-height: 500px;
+    border-radius: 25px;
+    background: linear-gradient(140deg, white, brown);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    padding-bottom: 20px;
+}
+
+.pr1:hover, .pr2:hover {
+    transform: perspective(800px) translateZ(20px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
+}
+
+.cvd, .fow {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+#phead, #phead2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: blueviolet;
+    padding: 15px 10px 5px;
+}
+
+#proj1, #proj2 {
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.5;
+    color: black;
+}
+
+#sset, #sset1 {
+    width: 90%;
+    margin: 10px auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+#skills {
+    overflow: hidden;
+    width: 100%;
+}
+
+.sl {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    animation: marquee 18s linear infinite;
+    padding: 20px 0;
+}
+
+@keyframes marquee {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(-100%); }
+}
+
+.sl:hover {
+    animation-play-state: paused;
+}
+
+.sl img {
+    width: 80px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.Footer {
+    background: linear-gradient(180deg, #E0E5FF 0%, #C3E6FF 100%);
+    padding: 40px 5%;
+}
+
+.info {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(120deg, teal, black);
+    border-radius: 25px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.info h4 {
+    margin-bottom: 20px;
+    font-family: Verdana, sans-serif;
+}
+
+.im {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.info p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.social i {
+    font-size: 24px;
+    color: whitesmoke;
+    transition: transform 0.3s;
+}
+
+.social i:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* For Laptops & Large Screens (TVs) */
+@media (min-width: 1400px) {
+    .Main {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* For Tablets */
+@media (max-width: 1024px) {
+    #about {
+        gap: 20px;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    #myimg {
+        margin: 10px 0;
+    }
+
+    .Nav {
+        margin-left: 0;
+        gap: 15px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    .pro1 {
+        gap: 20px;
+    }
+    
+    .pr1, .pr2 {
+        max-width: 100%;
+    }
+}
+
+/* For Very Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .Nav a {
+        font-size: 0.8rem;
+    }
+}
