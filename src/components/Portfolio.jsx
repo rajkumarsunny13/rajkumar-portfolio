@@ -6,7 +6,7 @@ import cVd from '../assets/Cardiovascular_disease_1.png'
 import fOw from '../assets/fow.jpeg'
 import hTml from '../assets/html-5.png'
 import cSs from '../assets/css-3.png'
-import javaScript from '../assets/Javascript.png'
+import jsImg from '../assets/javascript.png'
 import rEact from '../assets/react.png'
 import jAva from '../assets/java.png'
 import sQl from '../assets/sql.png'
@@ -64,7 +64,7 @@ const Portfolio = () => {
                         <div className="sl">
                               <img className="pic1" src={hTml}></img>
                               <img className="pic2" src={cSs}></img>
-                              <img className="pic3" src={javaScript}></img>
+                              <img className="pic3" src={jsImg}></img>
                               <img className="pic4" src={rEact}></img>
                               <img className="pic5" src={jAva}></img>
                               <img className="pic6" src={sQl}></img>
